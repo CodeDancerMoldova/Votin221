@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="658.0" styleClass="dark" stylesheets="@assets/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerSecond">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="80.0" layoutY="142.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="427.0" prefWidth="329.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#switchToScene1" prefHeight="60.0" prefWidth="329.0" stylesheets="@assets/style.css" text="Create VoteForms">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="10.0" prefWidth="329.0" />
+                  <ListView fx:id="lbl" prefHeight="355.0" prefWidth="329.0" styleClass="list-cell" stylesheets="@assets/style.css" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="329.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#switchToScene2" prefHeight="60.0" prefWidth="329.0" stylesheets="@assets/style.css" text="Show VoteForms">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="10.0" prefWidth="329.0" />
+                  <VBox alignment="CENTER" prefHeight="361.0" prefWidth="329.0">
+                     <children>
+                        <Label fx:id="labelVotingForm" alignment="CENTER" contentDisplay="CENTER" prefHeight="144.0" prefWidth="347.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <RadioButton fx:id="option1" mnemonicParsing="false" prefHeight="44.0" prefWidth="131.0" stylesheets="@assets/style.css">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="optionList" />
+                           </toggleGroup>
+                           <styleClass>
+                              <String fx:value="radio-button" />
+                              <String fx:value="radio" />
+                           </styleClass>
+                        </RadioButton>
+                        <RadioButton fx:id="option2" mnemonicParsing="false" prefHeight="38.0" prefWidth="131.0" stylesheets="@assets/style.css" toggleGroup="$optionList">
+                           <styleClass>
+                              <String fx:value="radio-button" />
+                              <String fx:value="radio" />
+                           </styleClass></RadioButton>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteVoteForm" styleClass="btn" stylesheets="@assets/style.css" text="Delete">
+                                 <HBox.margin>
+                                    <Insets left="100.0" right="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Cambria Bold Italic" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="submitVote" mnemonicParsing="false" onAction="#calculateVotes" styleClass="btn" stylesheets="@assets/style.css" text="Submit">
+                                 <font>
+                                    <Font name="Cambria Bold Italic" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

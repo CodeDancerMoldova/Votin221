@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="dark" stylesheets="@assets/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextField fx:id="nameFieldId" layoutX="203.0" layoutY="129.0" prefHeight="33.0" prefWidth="166.0" promptText="name..." styleClass="textfield" stylesheets="@assets/style.css" />
+      <TextField fx:id="descriptionFieldId" layoutX="203.0" layoutY="167.0" prefHeight="33.0" prefWidth="166.0" promptText="description..." styleClass="textfield" stylesheets="@assets/style.css" />
+      <TextField fx:id="option1Id" layoutX="237.0" layoutY="208.0" prefHeight="19.0" prefWidth="99.0" promptText="option 1 ...." styleClass="textfield" stylesheets="@assets/style.css" />
+      <TextField fx:id="option2Id" layoutX="237.0" layoutY="240.0" prefHeight="19.0" prefWidth="99.0" promptText="option 2 ...." styleClass="textfield" stylesheets="@assets/style.css" />
+      <Button fx:id="submitVoteForm" layoutX="255.0" layoutY="274.0" mnemonicParsing="false" onAction="#createVotingForm" styleClass="btn" stylesheets="@assets/style.css" text="Submit">
+         <font>
+            <Font name="Cambria Bold Italic" size="14.0" />
+         </font></Button>
+      <Button fx:id="createVoteForms" layoutX="9.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToScene1" prefHeight="49.0" prefWidth="291.0" stylesheets="@assets/style.css" text="Create VoteForms">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font></Button>
+      <Button fx:id="showVoteForms" layoutX="305.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="49.0" prefWidth="291.0" stylesheets="@assets/style.css" text="Show VoteForms">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
